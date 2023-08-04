@@ -1,0 +1,41 @@
+.OverviewWeather {
+  grid-row: 1/3;
+  color: #eee;
+  align-items: center;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  background-color: #68bde1;
+  padding: 2rem 1rem 0 1rem;
+}
+
+.OverviewWeather h1 {
+  font-size: 48px;
+  color: #1170c4;
+  text-transform: uppercase;
+}
+
+.OverviewWeather p {
+  font-size: 90px;
+  font-weight: 600;
+  color: #ff7db6;
+  font-family: AUTO;
+}
+
+.OverviewWeather p sup {
+  font-size: 38px;
+}
+
+.OverviewWeather span {
+  font-family: AUTO;
+}
+
+.OverviewWeather ul {
+  list-style: none;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.OverviewWeather li {
+  margin-bottom: 0.4rem;
+  font-size: 18px;
+}

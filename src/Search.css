@@ -1,0 +1,47 @@
+.Search {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.Search input[type="search"] {
+  padding: 0.5rem;
+  width: 60%;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 3px solid aliceblue;
+  font-family: "Lisu Bosa", serif;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.Search input[type="search"]:focus {
+  outline: none;
+  box-shadow: rgba(17, 112, 196, 0.12) 0px 2px 4px 0px,
+    rgba(17, 112, 196, 0.32) 0px 2px 16px 0px;
+}
+
+.Search input[type="search"]::placeholder {
+  color: #1170c4;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Lisu Bosa", serif;
+}
+
+.Search .btn {
+  padding: 0.5rem 2rem;
+  background-color: #ff7db6;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  font-size: 16px;
+  font-family: "Lisu Bosa", serif;
+  color: #eee;
+  transition: all 400ms ease-in-out;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.Search .btn:hover {
+  background-color: aliceblue;
+  color: #1170c4;
+}

@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Lisu+Bosa:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes moving {
+  50% {
+    background-position: -20%;
+  }
+
+  100% {
+    background-position: 10% 20%;
+  }
+}
+
+body {
+  background-image: url("./images/bg-sky.jpg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  animation: moving infinite 60s linear;
+  background-position: 10% 20%;
+  font-family: "Lisu Bosa", serif;
+}

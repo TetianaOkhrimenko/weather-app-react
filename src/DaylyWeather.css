@@ -1,0 +1,33 @@
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.DaylyWeather {
+  color: #eee;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  /* background-color: #fff6f6;*/
+  background-color: #68bde1;
+  padding: 2rem 1rem;
+  text-align: center;
+  font-size: 22px;
+}
+
+.DaylyWeather img {
+  width: 64px;
+}
+
+.DaylyWeather {
+  grid-row: 1/2;
+}
+
+.DaylyWeather:nth-child(n + 5) {
+  grid-row: 2/3;
+}
+
+.DaylyWeather p {
+  font-family: AUTO;
+  color: #ff7db6;
+  font-weight: 600;
+  font-size: 26px;
+}
