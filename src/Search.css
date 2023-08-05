@@ -39,9 +39,28 @@
   transition: all 400ms ease-in-out;
   text-transform: uppercase;
   font-weight: 700;
+  position: relative;
+  box-shadow: inset 0 0 0 0 #ff7db6;
 }
 
 .Search .btn:hover {
-  background-color: aliceblue;
-  color: #1170c4;
+  box-shadow: inset 200px 0 0 0 #fb4b97;
+  border: 3px solid #fb4b97;
+}
+
+.Search .btn:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  transition: all 400ms ease-in-out;
+  background-color: #ff6392;
+  right: 0;
+}
+
+.Search .btn:active {
+  top: 2px;
 }

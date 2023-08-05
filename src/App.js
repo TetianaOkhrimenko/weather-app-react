@@ -74,12 +74,12 @@ function App() {
         <p className="code_info">
           This App was buil by Tetiana Okhrimenko and is
           <a
-            href="https://github.com/TetianaOkhrimenko"
+            href="https://github.com/TetianaOkhrimenko/weather-app-react"
             target="_blank"
             rel="noreferrer"
           >
             {" "}
-            open-source
+            open-sourced
           </a>
           .
         </p>
