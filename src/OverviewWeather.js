@@ -2,26 +2,27 @@ import React from "react";
 import "./OverviewWeather.css";
 import ReactAnimatedWeather from "react-animated-weather";
 
-export default function OverviewWeather() {
+export default function OverviewWeather(props) {
   return (
     <div className="OverviewWeather">
-      <h1 className="mb-1">London</h1>
+      <h1 className="mb-1">{props.city}</h1>
       <ul>
         <li>
           TUESDAY <span>10:00</span>
         </li>
-        <li>Cloudy</li>
+        <li>{props.description}</li>
       </ul>
       <ReactAnimatedWeather icon="CLEAR_DAY" color="#EBE084" size={128} />
       <p className="mb-1">
-        19<sup>°C</sup>
+        {Math.round(props.temperature)}
+        <sup>°C</sup>
       </p>
       <ul>
         <li>
-          Humidity: <span>80</span>%
+          Humidity: <span>{props.humidity}</span>%
         </li>
         <li>
-          Wind: <span>10</span>m/s
+          Wind: <span>{Math.round(props.wind)}</span>m/s
         </li>
         <li>
           Precipitation: <span>58</span>%
