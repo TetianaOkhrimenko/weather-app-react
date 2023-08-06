@@ -17,6 +17,7 @@ function App() {
       description: response.data.weather[0].description,
       wind: response.data.wind.speed,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -34,6 +35,7 @@ function App() {
             humidity={weatherData.humidity}
             wind={weatherData.wind}
             city={weatherData.city}
+            date={weatherData.date}
           />
           <DaylyWeather
             icon="CLOUDY"
@@ -87,7 +89,7 @@ function App() {
     );
   } else {
     const API_KEY = "c94b4d94fde0a49cb46165408b7fec3c";
-    let city = "London";
+    let city = "Sheringham";
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
     axios.get(url).then(handleResponse);
     return "Loading...";

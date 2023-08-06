@@ -39,7 +39,7 @@
 
 .App .city_overview {
   display: grid;
-  grid-template-columns: 39% 17% 17% 17%;
+  grid-template-columns: 42% 16% 16% 16%;
   grid-template-rows: 50% 50%;
   gap: 1.5rem;
   margin-bottom: 3rem;

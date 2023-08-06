@@ -1,6 +1,7 @@
 import React from "react";
 import "./OverviewWeather.css";
 import ReactAnimatedWeather from "react-animated-weather";
+import FormattedDate from "./FormattedDate";
 
 export default function OverviewWeather(props) {
   return (
@@ -8,7 +9,7 @@ export default function OverviewWeather(props) {
       <h1 className="mb-1">{props.city}</h1>
       <ul>
         <li>
-          TUESDAY <span>10:00</span>
+          <FormattedDate date={props.date} />
         </li>
         <li>{props.description}</li>
       </ul>
