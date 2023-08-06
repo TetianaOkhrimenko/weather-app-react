@@ -37,6 +37,76 @@
   width: 128px;
 }
 
+.App .form {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.App .form input[type="search"] {
+  color: #1170c4;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Lisu Bosa", serif;
+  padding: 0.5rem;
+  width: 60%;
+  margin-right: 1rem;
+  border-radius: 5px;
+  border: 3px solid aliceblue;
+  background-color: transparent;
+}
+
+.App .form input[type="search"]:focus {
+  outline: none;
+  box-shadow: rgba(17, 112, 196, 0.12) 0px 2px 4px 0px,
+    rgba(17, 112, 196, 0.32) 0px 2px 16px 0px;
+}
+
+.App .form input[type="search"]::placeholder {
+  color: #1170c4;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Lisu Bosa", serif;
+  opacity: 0.9;
+}
+
+.App .form .btn {
+  padding: 0.5rem 2rem;
+  background-color: #ff7db6;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  font-size: 16px;
+  font-family: "Lisu Bosa", serif;
+  color: #eee;
+  transition: all 400ms ease-in-out;
+  text-transform: uppercase;
+  font-weight: 700;
+  position: relative;
+  box-shadow: inset 0 0 0 0 #ff7db6;
+}
+
+.App .form .btn:hover {
+  box-shadow: inset 200px 0 0 0 #fb4b97;
+  border: 3px solid #fb4b97;
+}
+
+.App .form .btn:after {
+  border-radius: 5px;
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  z-index: -1;
+  transition: all 400ms ease-in-out;
+  background-color: #ff6392;
+  right: 0;
+}
+
+.App .form .btn:active {
+  top: 2px;
+}
+
 .App .city_overview {
   display: grid;
   grid-template-columns: 42% 16% 16% 16%;

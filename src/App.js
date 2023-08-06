@@ -3,11 +3,12 @@ import { useState } from "react";
 import sun from "./images/sun2.png";
 import DaylyWeather from "./DaylyWeather";
 import OverviewWeather from "./OverviewWeather";
-import Search from "./Search";
 import axios from "axios";
 
 function App() {
+  const [city, setCity] = useState("London");
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [value, setValue] = useState("");
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -21,22 +22,41 @@ function App() {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+    setValue("");
+  }
+
+  function handleInput(event) {
+    setCity(event.target.value);
+    setValue(event.target.value);
+  }
+
+  function search() {
+    const API_KEY = "c94b4d94fde0a49cb46165408b7fec3c";
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
+    axios.get(url).then(handleResponse);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="App">
         <div className="sun-animation">
           <img src={sun} alt="Sun" />
         </div>
-        <Search />
-        <div className="city_overview">
-          <OverviewWeather
-            temperature={weatherData.temperature}
-            description={weatherData.description}
-            humidity={weatherData.humidity}
-            wind={weatherData.wind}
-            city={weatherData.city}
-            date={weatherData.date}
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            value={value}
+            type="search"
+            placeholder="Type a name of city..."
+            autoFocus="on"
+            onChange={handleInput}
           />
+          <input type="submit" value="Search" className="btn" />
+        </form>
+        <div className="city_overview">
+          <OverviewWeather data={weatherData} />
           <DaylyWeather
             icon="CLOUDY"
             color="#EBE084"
@@ -88,10 +108,7 @@ function App() {
       </div>
     );
   } else {
-    const API_KEY = "c94b4d94fde0a49cb46165408b7fec3c";
-    let city = "Sheringham";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
-    axios.get(url).then(handleResponse);
+    search();
     return "Loading...";
   }
 }
