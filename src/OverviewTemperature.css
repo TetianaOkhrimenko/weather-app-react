@@ -1,0 +1,32 @@
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.OverviewTemperature p {
+  font-size: 90px;
+  font-weight: 600;
+  color: #ff7db6;
+  font-family: AUTO;
+}
+
+.OverviewTemperature p sup {
+  font-size: 28px;
+  position: absolute;
+}
+
+.OverviewTemperature a {
+  color: #ff7db6;
+  text-decoration: none;
+}
+
+.OverviewTemperature .blue {
+  color: #1170c4;
+}
+
+.OverviewTemperature .red {
+  color: #ff7db6;
+}
+
+.OverviewTemperature span {
+  font-family: AUTO;
+}

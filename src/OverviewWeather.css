@@ -14,21 +14,6 @@
   text-transform: uppercase;
 }
 
-.OverviewWeather p {
-  font-size: 90px;
-  font-weight: 600;
-  color: #ff7db6;
-  font-family: AUTO;
-}
-
-.OverviewWeather p sup {
-  font-size: 38px;
-}
-
-.OverviewWeather span {
-  font-family: AUTO;
-}
-
 .OverviewWeather ul {
   list-style: none;
   padding: 0;
@@ -38,4 +23,8 @@
 .OverviewWeather li {
   margin-bottom: 0.4rem;
   font-size: 18px;
+}
+
+.OverviewWeather span {
+  font-family: AUTO;
 }
