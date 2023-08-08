@@ -25,9 +25,16 @@
   grid-row: 2/3;
 }
 
-.DaylyWeather p {
+.DaylyWeather p:nth-of-type(2n + 1) {
   font-family: AUTO;
   color: #ff7db6;
   font-weight: 600;
   font-size: 26px;
+}
+
+.DaylyWeather p:nth-of-type(2n) {
+  font-family: AUTO;
+  color: #1170c4;
+  font-weight: 600;
+  font-size: 22px;
 }

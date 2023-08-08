@@ -14,7 +14,7 @@ export default function OverviewWeather(props) {
         </li>
         <li>{props.data.description}</li>
       </ul>
-      <WeatherIcon code={props.data.icon} />
+      <WeatherIcon code={props.data.icon} size={128} />
       <OverviewTemperature celsius={props.data.temperature} />
       <ul>
         <li>

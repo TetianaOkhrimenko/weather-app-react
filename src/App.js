@@ -1,8 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import sun from "./images/sun2.png";
-import DaylyWeather from "./DaylyWeather";
-import OverviewWeather from "./OverviewWeather";
+import Forecast from "./Forecast";
 import axios from "axios";
 
 function App() {
@@ -12,6 +11,7 @@ function App() {
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      coordinates: response.data.coord,
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -56,44 +56,9 @@ function App() {
           />
           <input type="submit" value="Search" className="btn" />
         </form>
-        <div className="city_overview">
-          <OverviewWeather data={weatherData} />
-          <DaylyWeather
-            icon="CLOUDY"
-            color="#EBE084"
-            size={64}
-            day="FRI"
-            temperature={20}
-          />
-          <DaylyWeather
-            icon="PARTLY_CLOUDY_DAY"
-            color="#EBE084"
-            size={64}
-            day="SUT"
-            temperature={18}
-          />
-          <DaylyWeather
-            icon="CLEAR_DAY"
-            color="#EBE084"
-            size={64}
-            day="SUN"
-            temperature={19}
-          />
-          <DaylyWeather
-            icon="CLEAR_DAY"
-            color="#EBE084"
-            size={64}
-            day="MON"
-            temperature={22}
-          />
-          <DaylyWeather
-            icon="CLEAR_DAY"
-            color="#EBE084"
-            size={64}
-            day="TUE"
-            temperature={21}
-          />
-        </div>
+
+        <Forecast data={weatherData} />
+
         <p className="code_info">
           This App was buil by Tetiana Okhrimenko and is
           <a

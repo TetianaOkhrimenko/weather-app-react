@@ -1,0 +1,7 @@
+.Forecast {
+  display: grid;
+  grid-template-columns: 42% 16% 16% 16%;
+  grid-template-rows: 50% 50%;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
