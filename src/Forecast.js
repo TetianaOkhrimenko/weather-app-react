@@ -7,6 +7,7 @@ import axios from "axios";
 export default function Forecast(props) {
   const [loadedData, setLoadedData] = useState(false);
   const [forecastData, setForecastData] = useState(null);
+  const [precipitation, setPrecipitation] = useState(null);
 
   useEffect(() => {
     setLoadedData(false);
@@ -15,6 +16,8 @@ export default function Forecast(props) {
   function handleResponseDaily(response) {
     setForecastData(response.data.daily);
     setLoadedData(true);
+    setPrecipitation(response.data.hourly[0].pop * 100);
+    console.log(response.data);
   }
 
   console.log(forecastData);
@@ -23,7 +26,7 @@ export default function Forecast(props) {
     console.log(forecastData);
     return (
       <div className="Forecast">
-        <OverviewWeather data={props.data} />
+        <OverviewWeather data={props.data} precipitation={precipitation} />
         {forecastData.map((dayWeather, index) => {
           if (index > 0 && index < 7) {
             return <DaylyWeather data={dayWeather} key={index} />;

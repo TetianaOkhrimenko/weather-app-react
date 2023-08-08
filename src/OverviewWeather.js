@@ -24,7 +24,7 @@ export default function OverviewWeather(props) {
           Wind: <span>{Math.round(props.data.wind)}</span>m/s
         </li>
         <li>
-          Precipitation: <span>58</span>%
+          Precipitation: <span>{Math.round(props.precipitation)}</span>%
         </li>
       </ul>
     </div>
