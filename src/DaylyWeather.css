@@ -6,7 +6,6 @@
   color: #eee;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  /* background-color: #fff6f6;*/
   background-color: #68bde1;
   padding: 2rem 1rem;
   text-align: center;
@@ -37,4 +36,50 @@
   color: #1170c4;
   font-weight: 600;
   font-size: 22px;
+}
+
+@media (max-width: 576px) {
+  .DaylyWeather {
+    font-size: 32px;
+  }
+
+  .DaylyWeather:nth-child(n + 2) {
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+
+  .DaylyWeather:nth-child(n + 3) {
+    grid-row: 3/4;
+    grid-column: 2/3;
+  }
+
+  .DaylyWeather:nth-child(n + 4) {
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+  .DaylyWeather:nth-child(n + 5) {
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+
+  .DaylyWeather:nth-child(n + 6) {
+    grid-row: 5/6;
+    grid-column: 1/2;
+  }
+  .DaylyWeather:nth-child(n + 7) {
+    grid-row: 5/6;
+    grid-column: 2/3;
+  }
+
+  .DaylyWeather canvas {
+    width: 80px;
+  }
+
+  .DaylyWeather p:nth-of-type(2n + 1) {
+    font-size: 32px;
+  }
+  .DaylyWeather p:nth-of-type(2n) {
+    font-size: 28px;
+  }
 }

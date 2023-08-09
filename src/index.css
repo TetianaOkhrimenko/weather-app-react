@@ -24,3 +24,11 @@ body {
   background-position: 10% 20%;
   font-family: "Lisu Bosa", serif;
 }
+
+@media (max-width: 576px) {
+  body {
+    animation-play-state: paused;
+    background-image: none;
+    background-color: #cfeefa;
+  }
+}

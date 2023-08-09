@@ -5,3 +5,11 @@
   gap: 1.5rem;
   margin-bottom: 3rem;
 }
+
+@media (max-width: 576px) {
+  .Forecast {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+  }
+}

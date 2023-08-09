@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import sun from "./images/sun2.png";
 import Forecast from "./Forecast";
+import { SpinnerDotted } from "spinners-react";
 import axios from "axios";
 
 function App() {
@@ -75,7 +76,23 @@ function App() {
     );
   } else {
     search();
-    return "Loading...";
+    return (
+      <div className="App">
+        <div className="sun-animation">
+          <img src={sun} alt="Sun" />
+        </div>
+
+        <div>
+          <SpinnerDotted
+            className="spinner"
+            size={90}
+            thickness={180}
+            speed={70}
+            color="rgba(17, 112, 196, 1)"
+          />
+        </div>
+      </div>
+    );
   }
 }
 

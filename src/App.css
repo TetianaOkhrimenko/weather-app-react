@@ -37,6 +37,11 @@
   width: 128px;
 }
 
+.App .spinner {
+  margin: 0 auto;
+  display: block;
+}
+
 .App .form {
   width: 100%;
   margin-bottom: 2rem;
@@ -121,4 +126,40 @@
 
 .App .code_info a:hover {
   color: #fb4b97;
+}
+
+@media (max-width: 576px) {
+  .App .sun-animation {
+    animation-play-state: paused;
+  }
+
+  .App {
+    margin: 2rem auto;
+    width: 100%;
+  }
+
+  .App .form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .App .form input[type="search"] {
+    width: 100%;
+  }
+
+  .App .form input[type="search"]::placeholder {
+    font-size: 22px;
+  }
+
+  .App .form .btn {
+    font-size: 22px;
+  }
+
+  .App .code_info {
+    text-align: center;
+    font-size: 26px;
+  }
 }
