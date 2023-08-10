@@ -25,9 +25,34 @@ body {
   font-family: "Lisu Bosa", serif;
 }
 
+@media (max-width: 1200px) {
+  @keyframes moving {
+    50% {
+      background-position: 0 -20%;
+    }
+
+    100% {
+      background-position: 0% 20%;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  @keyframes moving {
+    50% {
+      background-position: 0 -20%;
+    }
+
+    100% {
+      background-position: 0% 20%;
+    }
+  }
+}
+
 @media (max-width: 768px) {
   body {
     animation-play-state: paused;
+    background-position: 30% 20%;
   }
 }
 
