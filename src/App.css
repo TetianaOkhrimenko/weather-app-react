@@ -136,6 +136,7 @@
   .App {
     margin: 2rem auto;
     width: 100%;
+    padding: 1rem;
   }
 
   .App .form {
@@ -148,6 +149,8 @@
 
   .App .form input[type="search"] {
     width: 100%;
+    margin-right: 0;
+    font-size: 22px;
   }
 
   .App .form input[type="search"]::placeholder {
