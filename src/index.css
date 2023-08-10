@@ -25,6 +25,12 @@ body {
   font-family: "Lisu Bosa", serif;
 }
 
+@media (max-width: 768px) {
+  body {
+    animation-play-state: paused;
+  }
+}
+
 @media (max-width: 576px) {
   body {
     animation-play-state: paused;

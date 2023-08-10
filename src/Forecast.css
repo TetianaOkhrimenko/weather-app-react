@@ -6,6 +6,15 @@
   margin-bottom: 3rem;
 }
 
+@media (max-width: 768px) {
+  .Forecast {
+    display: grid;
+    grid-template-columns: 44% 25% 25%;
+    grid-template-rows: 33% 33% 33%;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 576px) {
   .Forecast {
     grid-template-columns: 50% 50%;

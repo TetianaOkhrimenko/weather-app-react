@@ -29,6 +29,20 @@
   font-family: AUTO;
 }
 
+@media (max-width: 768px) {
+  .OverviewWeather {
+    grid-row: 1/4;
+  }
+
+  .OverviewWeather h1 {
+    font-size: 36px;
+  }
+
+  .OverviewWeather li {
+    font-size: 22px;
+  }
+}
+
 @media (max-width: 576px) {
   .OverviewWeather {
     text-align: center;
