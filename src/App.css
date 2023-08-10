@@ -158,6 +158,10 @@
     font-size: 22px;
   }
 
+  .App .form .btn:hover {
+    box-shadow: inset 400px 0 0 0 #fb4b97;
+  }
+
   .App .code_info {
     text-align: center;
     font-size: 26px;
