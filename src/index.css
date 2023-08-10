@@ -37,18 +37,6 @@ body {
   }
 }
 
-@media (max-width: 992px) {
-  @keyframes moving {
-    50% {
-      background-position: 0 -20%;
-    }
-
-    100% {
-      background-position: 0% 20%;
-    }
-  }
-}
-
 @media (max-width: 768px) {
   body {
     animation-play-state: paused;
@@ -58,7 +46,6 @@ body {
 
 @media (max-width: 576px) {
   body {
-    animation-play-state: paused;
     background-image: none;
     background-color: #cfeefa;
   }

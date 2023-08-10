@@ -21,9 +21,6 @@
   border: 1px solid transparent;
   border-radius: 5px;
   padding: 2rem;
-  /*background-color: #fff6f6;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;*/
 }
 
 .App .sun-animation {
@@ -155,6 +152,7 @@
 @media (max-width: 992px) {
   .App {
     width: 100%;
+    padding: 2rem 1rem;
   }
 
   .App .sun-animation {
@@ -164,15 +162,17 @@
 }
 
 @media (max-width: 768px) {
-  .App .sun-animation {
-    animation-play-state: paused;
-  }
   .App {
     padding: 1rem;
   }
 }
 
 @media (max-width: 576px) {
+  .App .sun-animation {
+    display: none;
+    animation-play-state: paused;
+  }
+
   .App .form {
     display: flex;
     flex-direction: column;
