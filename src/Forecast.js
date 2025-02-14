@@ -38,7 +38,7 @@ export default function Forecast(props) {
     );
   } else {
    // const API_KEY = "8c78e9e7e9928cd1a2a6f923072c3dec";
-    const API_KEY = "c94b4d94fde0a49cb46165408b7fec3c";
+    const API_KEY = "6b35a1b814b399d5a53fab41018fd33e";
   
     let latitude = props.data.coordinates.lat;
     let longitude = props.data.coordinates.lon;
